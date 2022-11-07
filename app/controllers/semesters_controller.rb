@@ -3,7 +3,12 @@ class SemestersController < ApplicationController
 
   # GET /semesters or /semesters.json
   def index
-    @semesters = Semester.all
+    #@semesters = Semester.all
+    if params[:query]
+      @semesters = Semester.where("year like ?", "%#{params[:query]}%")
+    else
+      @semesters = Semester.all
+    end
   end
 
   # GET /semesters/1 or /semesters/1.json

@@ -3,8 +3,13 @@ class SectionsController < ApplicationController
 
   # GET /sections or /sections.json
   def index
-    @sections = Section.all
+   # @sections = Section.all
     @students = Student.all
+    if params[:query]
+      @sections = Section.where("Crn like ?", "%#{params[:query]}%")
+    else
+      @sections = Section.all
+    end
   end
 
   # GET /sections/1 or /sections/1.json
