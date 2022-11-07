@@ -1,6 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+
 <h1>Students</h1>
+<%=form_tag(students_url, method:"get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
 
 <div id="students">
   <% @students.each do |student| %>
@@ -12,3 +20,6 @@
 </div>
 
 <%= link_to "New student", new_student_path %>
+
+
+    

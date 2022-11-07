@@ -3,9 +3,15 @@ class StudentsController < ApplicationController
 
   # GET /students or /students.json
   def index
-    @students = Student.all
     @sections = Section.all
+
+    if params[:query]
+      @students = Student.where("student_id like ?", "%#{params[:query]}%")
+    else
+      @students = Student.all
+    end 
   end
+
 
   # GET /students/1 or /students/1.json
   def show
@@ -69,6 +75,5 @@ class StudentsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def student_params
       params.require(:student).permit(:student_name, :student_id, :student_email, :student_phone, :physical_address, :section_ids => [])
-#       params.require(:student).permit(:student_id, :section_ids => [])
     end
 end
