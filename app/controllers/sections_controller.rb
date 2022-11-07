@@ -4,6 +4,13 @@ class SectionsController < ApplicationController
   # GET /sections or /sections.json
   def index
    # @sections = Section.all
+  #  @sections = Section.joins(:Course).joins(:Semester).joins("LEFT JOIN Prefixes ON Prefixes.id = Courses.Prefix_id").where(
+  #   "CRN LIKE ?
+  #   OR Prefixes.prefix || Courses.number LIKE ?
+  #   OR semesters.semester LIKE ?
+  #   OR semesters.year LIKE ?
+  #   OR semesters.semester || ' ' || semesters.year LIKE ?",
+  #   "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
     @students = Student.all
     if params[:query]
       @sections = Section.where("Crn like ?", "%#{params[:query]}%")
