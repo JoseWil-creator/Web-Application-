@@ -2,6 +2,10 @@
 
 one:
   prefix: MyString
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
 two:
   prefix: MyString
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_11_07_002215) do
   create_table "courses", force: :cascade do |t|
-    t.integer "prefix_id", null: false
+    t.integer "prefix_id"
     t.integer "number"
     t.string "name"
     t.datetime "created_at", null: false
@@ -38,8 +38,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_07_002215) do
 
   create_table "sections", force: :cascade do |t|
     t.integer "Crn"
-    t.integer "course_id", null: false
-    t.integer "semester_id", null: false
+    t.integer "course_id"
+    t.integer "semester_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_sections_on_course_id"

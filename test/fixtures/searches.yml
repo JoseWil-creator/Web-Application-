@@ -6,6 +6,8 @@ one:
   email: MyString
   phone: 1
   address: MyString
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
 two:
   name: MyString
@@ -13,3 +15,5 @@ two:
   email: MyString
   phone: 1
   address: MyString
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

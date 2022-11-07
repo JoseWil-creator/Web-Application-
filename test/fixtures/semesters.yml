@@ -3,7 +3,11 @@
 one:
   semester: MyString
   year: 1
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
 two:
   semester: MyString
   year: 1
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
