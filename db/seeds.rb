@@ -35,7 +35,7 @@ puts "Sending data... (^_^)"
     Course.create(
         prefix_id: 1,
         number: Faker::Number.between(from:10000, to: 90000),
-        name: "Web App Development"
+        name: Faker::Name.name
     )
  end
  # counter to register all 5 students in different sections. Counter will be increase 5 times thus, matching 5 foreigh keys

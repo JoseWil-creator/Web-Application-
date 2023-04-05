@@ -4,7 +4,6 @@ class Semester < ApplicationRecord
 
     validates :year, numericality: {greater_than_or_equal_to: 2022, less_than: 2030} # Validates year 2022 to 2030
     validates :semester, acceptance: { accept: ['Fall', 'Summer', 'Spring'], 
-        message: ': Only Fall, Spring or Summer will be accepted!' } # 
+        message: ': Only Fall, Spring or Summer will be accepted!' } #  Ensures that user can only enter true semesters
     #validates_associated :sections
-   # validates :year, length: {is: 4}
 end

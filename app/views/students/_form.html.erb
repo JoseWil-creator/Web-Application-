@@ -37,7 +37,7 @@
   </div>
   <div>
     <%= form.label :section_id, style: "display: block" %>
-    <%= form.collection_check_boxes(:section_ids, @sections, :id, :Crn) %>
+    <%= form.collection_check_boxes(:section_ids, Section.all, :id, :Crn) %>
   </div>
 
   <div>

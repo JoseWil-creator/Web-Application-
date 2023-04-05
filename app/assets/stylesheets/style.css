@@ -76,7 +76,7 @@ header{
 
 .nav-link{
     font-family: poppins;
-    color: #fed136 !important;
+    color: #b6bbf4 !important;
 }
 .banner-text p{
     font-family: poppins;
@@ -93,13 +93,13 @@ header{
     color: #fff;
 }
 .banner-btn a.active{
-    background-repeat: #fed136;
-    border-color: #fed136;
-    color: #000;
+    background-repeat: #b6bbf4;
+    border-color: #b6bbf4;
+    color: rgb(249, 249, 249);
 }
 
 .navbar-dark .navbar-brand{
-    color: #fed136;
+    color: #b6bbf4;
     font-size: 40px;
     font-family: cursive;
 
@@ -111,7 +111,7 @@ header{
 
 }
 .text-area span{
-    color:  #fed136;
+    color:  #b6bbf4;
     opacity: 0;
     transform: translate(0, -100px) rotate(360deg) scale(0);
     animation: animate 5s forwards;
@@ -160,7 +160,7 @@ header{
         display: none;
     }
     .narbar-dark{
-        background: #333;
+        background: rgb(179, 77, 77);
     }
     .text-area{
         font-size: 30px;

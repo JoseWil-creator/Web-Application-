@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Crn: 1
+  Crn: 33447
   course: one
   semester: one
   created_at: <%= Time.zone.now %>
